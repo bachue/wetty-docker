@@ -18,6 +18,7 @@ RUN useradd -d /home/term -m -s /bin/bash term && \
 WORKDIR /home/term
 VOLUME /home/term/data
 ADD tmux.conf .tmux.conf
+RUN mkdir -p /home/term/data && chown -R term.term /home/term
 
 ADD wetty /wetty
 
