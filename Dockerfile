@@ -16,7 +16,7 @@ RUN useradd -d /home/term -m -s /bin/bash term && \
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
     echo 'term:term' | chpasswd
 WORKDIR /home/term
-VOLUME /home/term
+VOLUME /home/term/data
 ADD tmux.conf .tmux.conf
 
 ADD wetty /wetty
